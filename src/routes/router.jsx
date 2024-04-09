@@ -7,6 +7,7 @@ import Register from '../pages/Register';
 import Service from '../pages/Service';
 import About from '../pages/About';
 import Product from '../pages/Product';
+import Property from '../pages/Property';
 
 const router = createBrowserRouter([
     {
@@ -15,7 +16,12 @@ const router = createBrowserRouter([
       children:[
       {
         path:'/',
-        element:<Home></Home>
+        element:<Home></Home>,
+        loader: ()=> fetch('/fakedata.json')
+      },
+      {
+        path:'/property/:id',
+        element:<Property></Property>
       },
       {
         path:'/login',

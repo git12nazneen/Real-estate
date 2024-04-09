@@ -7,9 +7,9 @@
         "price": "$500,000",
         "status": "sale",
         "area": "5000 sq ft",
-        "location": "Industrial Park, City A",
+        "location": " City A",
         "facilities": ["loading docks", "ample storage space"],
-        "image": "warehouse_image.jpg"
+        "image": "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "id": "2",
@@ -19,9 +19,9 @@
         "price": "$5,000/month",
         "status": "rent",
         "area": "10,000 sq ft",
-        "location": "Industrial Zone, City B",
+        "location": "City B",
         "facilities": ["advanced machinery", "production facilities"],
-        "image": "factory_image.jpg"
+        "image": "https://images.pexels.com/photos/443409/pexels-photo-443409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "id": "3",
@@ -31,9 +31,9 @@
         "price": "$1,200,000",
         "status": "sale",
         "area": "3000 sq ft",
-        "location": "Cold Storage District, City C",
+        "location": " City C",
         "facilities": ["temperature control", "perishable goods storage"],
-        "image": "cold_storage_image.jpg"
+        "image": "https://images.pexels.com/photos/5953684/pexels-photo-5953684.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "id": "4",
@@ -43,9 +43,9 @@
         "price": "$20,000/month",
         "status": "rent",
         "area": "50,000 sq ft",
-        "location": "Power Generation Zone, City D",
+        "location": "City D",
         "facilities": ["clean energy generation", "advanced equipment"],
-        "image": "power_plant_image.jpg"
+        "image": "https://images.pexels.com/photos/4404282/pexels-photo-4404282.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "id": "5",
@@ -55,9 +55,9 @@
         "price": "$1,800,000",
         "status": "sale",
         "area": "8000 sq ft",
-        "location": "Industrial Estate, City E",
+        "location": " City E",
         "facilities": ["automated assembly lines", "high-capacity production"],
-        "image": "production_plant_image.jpg"
+        "image": "https://images.pexels.com/photos/2760343/pexels-photo-2760343.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "id": "6",
@@ -67,9 +67,9 @@
         "price": "$3,500/month",
         "status": "rent",
         "area": "2000 sq ft",
-        "location": "Business District, City F",
+        "location": " City F",
         "facilities": ["modern amenities", "industrial park location"],
-        "image": "office_space_image.jpg"
+        "image": "https://images.pexels.com/photos/699459/pexels-photo-699459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "id": "7",
@@ -79,9 +79,9 @@
         "price": "$2,500,000",
         "status": "sale",
         "area": "5 acres",
-        "location": "Industrial Zone, City G",
+        "location": " City G",
         "facilities": ["development potential", "prime location"],
-        "image": "industrial_land_image.jpg"
+        "image": "https://images.pexels.com/photos/2884590/pexels-photo-2884590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "id": "8",
@@ -91,9 +91,9 @@
         "price": "$7,000/month",
         "status": "rent",
         "area": "6000 sq ft",
-        "location": "Refrigeration District, City H",
+        "location": " City H",
         "facilities": ["temperature-controlled storage", "specialized refrigeration"],
-        "image": "refrigerated_warehouse_image.jpg"
+        "image": "https://images.pexels.com/photos/3623785/pexels-photo-3623785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       }
     ]
 
