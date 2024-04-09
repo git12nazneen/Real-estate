@@ -4,6 +4,7 @@ import Banner from '../components/Banner/Banner';
 import Footer from '../shared/Footer';
 import Copyright from './Copyright';
 import Faq from '../components/Faq';
+import Estate from '../components/Estate';
 
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
         <div>
             <Nav></Nav>
             <Banner></Banner>
+            <Estate></Estate>
             <Faq></Faq>
             <Footer></Footer>
             <Copyright></Copyright>

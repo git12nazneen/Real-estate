@@ -1,0 +1,100 @@
+ [
+      {
+        "id": "1",
+        "estate_title": "Warehouse for Sale",
+        "segment_name": "Warehouses",
+        "description": "Spacious warehouse with loading docks and ample storage space.",
+        "price": "$500,000",
+        "status": "sale",
+        "area": "5000 sq ft",
+        "location": "Industrial Park, City A",
+        "facilities": ["loading docks", "ample storage space"],
+        "image": "warehouse_image.jpg"
+      },
+      {
+        "id": "2",
+        "estate_title": "Factory for Rent",
+        "segment_name": "Factories",
+        "description": "Modern factory with advanced machinery and production facilities.",
+        "price": "$5,000/month",
+        "status": "rent",
+        "area": "10,000 sq ft",
+        "location": "Industrial Zone, City B",
+        "facilities": ["advanced machinery", "production facilities"],
+        "image": "factory_image.jpg"
+      },
+      {
+        "id": "3",
+        "estate_title": "Cold Storage Facility for Sale",
+        "segment_name": "Cold Storage Facilities",
+        "description": "Temperature-controlled facility for storing perishable goods.",
+        "price": "$1,200,000",
+        "status": "sale",
+        "area": "3000 sq ft",
+        "location": "Cold Storage District, City C",
+        "facilities": ["temperature control", "perishable goods storage"],
+        "image": "cold_storage_image.jpg"
+      },
+      {
+        "id": "4",
+        "estate_title": "Power Plant for Rent",
+        "segment_name": "Power Plants",
+        "description": "State-of-the-art power plant capable of generating clean energy.",
+        "price": "$20,000/month",
+        "status": "rent",
+        "area": "50,000 sq ft",
+        "location": "Power Generation Zone, City D",
+        "facilities": ["clean energy generation", "advanced equipment"],
+        "image": "power_plant_image.jpg"
+      },
+      {
+        "id": "5",
+        "estate_title": "Production Plant for Sale",
+        "segment_name": "Production Plants",
+        "description": "High-capacity production plant with automated assembly lines.",
+        "price": "$1,800,000",
+        "status": "sale",
+        "area": "8000 sq ft",
+        "location": "Industrial Estate, City E",
+        "facilities": ["automated assembly lines", "high-capacity production"],
+        "image": "production_plant_image.jpg"
+      },
+      {
+        "id": "6",
+        "estate_title": "Industrial Park Office Space for Rent",
+        "segment_name": "Industrial Parks",
+        "description": "Modern office space located within an industrial park with convenient amenities.",
+        "price": "$3,500/month",
+        "status": "rent",
+        "area": "2000 sq ft",
+        "location": "Business District, City F",
+        "facilities": ["modern amenities", "industrial park location"],
+        "image": "office_space_image.jpg"
+      },
+      {
+        "id": "7",
+        "estate_title": "Industrial Land for Sale",
+        "segment_name": "Industrial Land",
+        "description": "Vacant industrial land suitable for development in a prime location.",
+        "price": "$2,500,000",
+        "status": "sale",
+        "area": "5 acres",
+        "location": "Industrial Zone, City G",
+        "facilities": ["development potential", "prime location"],
+        "image": "industrial_land_image.jpg"
+      },
+      {
+        "id": "8",
+        "estate_title": "Refrigerated Warehouse for Rent",
+        "segment_name": "Warehouses",
+        "description": "Specialized refrigerated warehouse for storing temperature-sensitive goods.",
+        "price": "$7,000/month",
+        "status": "rent",
+        "area": "6000 sq ft",
+        "location": "Refrigeration District, City H",
+        "facilities": ["temperature-controlled storage", "specialized refrigeration"],
+        "image": "refrigerated_warehouse_image.jpg"
+      }
+    ]
+
+  

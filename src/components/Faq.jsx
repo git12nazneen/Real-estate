@@ -8,8 +8,8 @@ const Faq = () => {
             <div className="hero-content flex-col lg:flex-row-reverse">
                 
                 <div className='w-3/6 space-y-5 '>
-                        <h1 className='text-red-800 font-extrabold text-4xl'>Frequiently Asked Questions</h1>
-                        <p className='text-xs font-light '>Here are some frequently asked questions (FAQs) related to industrial facilities like warehouses, factories, production plants, industrial parks, cold storage facilities, power plants, etc., along with their answers:</p>
+                        <h1 className='text-red-800 font-extrabold text-3xl'>Frequiently Asked Questions</h1>
+                        <small className=' font-light '>Here are some frequently asked questions (FAQs) related to industrial facilities like warehouses, factories, production plants, industrial parks, cold storage facilities, power plants, etc., along with their answers:</small>
                          <div className="collapse collapse-plus bg-rose-200">
                         <input type="radio" name="my-accordion-3" defaultChecked /> 
                         <div className="collapse-title ">
