@@ -1,6 +1,8 @@
 import React from 'react';
 import Nav from '../shared/Nav';
 import Banner from '../components/Banner/Banner';
+import Footer from '../shared/Footer';
+import Copyright from './Copyright';
 
 
 const Home = () => {
@@ -8,6 +10,8 @@ const Home = () => {
         <div>
             <Nav></Nav>
             <Banner></Banner>
+            <Footer></Footer>
+            <Copyright></Copyright>
         </div>
     );
 };

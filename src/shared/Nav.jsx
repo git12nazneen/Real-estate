@@ -14,7 +14,7 @@ const Nav = () => {
     </>
 
     return (
-        <div>
+        <div className='max-w-6xl mx-auto'>
         <div className="navbar bg-faf0f0">
           <div className="navbar-start">
               <div className="dropdown">
