@@ -8,7 +8,6 @@ import { SiAntdesign } from "react-icons/si";
 const About = () => {
     return (
         <div>
-            <Nav></Nav>
             <div>
             <div className="hero bg-rose-100">
                 <div className="hero-content flex-col lg:flex-row-reverse">

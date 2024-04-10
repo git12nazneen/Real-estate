@@ -16,7 +16,7 @@ const Home = () => {
 
     return (
         <div>
-            <Nav></Nav>
+      
             <Banner></Banner>
              <div className="space-y-2 text-center py-8 bg-gray-100">
                     <h2 className="text-3xl font-bold text-red-800">Estates</h2>
@@ -32,8 +32,6 @@ const Home = () => {
            </div>
            
             <Faq></Faq>
-            <Footer></Footer>
-            <Copyright></Copyright>
         </div>
     );
 };
