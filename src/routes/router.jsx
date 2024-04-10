@@ -21,7 +21,8 @@ const router = createBrowserRouter([
       },
       {
         path:'/property/:id',
-        element:<Property></Property>
+        element:<Property></Property>,
+        loader:() => fetch('/fakedata.json')
       },
       {
         path:'/login',
