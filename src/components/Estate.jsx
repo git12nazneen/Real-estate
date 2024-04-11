@@ -34,7 +34,7 @@ const Estate = ({estate}) => {
                                
                                 <span>{estate.location.slice(0,10)}</span>
                                 <Link to={`/property/${id}`}>
-                                <span><button className='btn text-white bg-rose-800'>View Property</button></span>
+                                <span><button className='btn rounded-full text-white bg-rose-800'>View Property</button></span>
                                 </Link>
                             </div>
                         </div>

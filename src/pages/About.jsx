@@ -11,7 +11,6 @@ const About = () => {
             <div>
             <div className="hero bg-rose-100">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    
                     <div className="max-w-lg card shrink-0 w-full  ">
                         <div>
                             <img className='rounded-full shadow-3xl border-white border-8 shadow-slate-500' src={aboutImg} alt="" />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logoImage from '../assets/logo.png';
 
 const Nav = () => {
@@ -9,7 +9,7 @@ const Nav = () => {
     <li><NavLink to='/about'>About</NavLink></li>
     <li><NavLink to='/service'>Service</NavLink></li>
     <li><NavLink to='/product'>Product</NavLink></li>
-    <li><NavLink to='/login'>Login</NavLink></li>
+    <li><NavLink to='/contact'>Contact</NavLink></li>
     
     </>
 
@@ -50,9 +50,9 @@ const Nav = () => {
              
             
           </div> */}
-           <div className="navbar-end">
-                 <a className="btn">Button</a>
-            </div>
+           <Link to='/login' className="navbar-end">
+                 <a className="btn">Login</a>
+            </Link>
           </div>
       </div>
     );
