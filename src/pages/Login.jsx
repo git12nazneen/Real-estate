@@ -1,17 +1,40 @@
 import { Link } from 'react-router-dom';
 import login from '../assets/login.jpg'
 
+import { AuthContext } from '../provider/AuthProvider';
+import { useContext } from 'react';
+import { Result } from 'postcss';
+
 const Login = () => {
+
+	const {signIn} =useContext(AuthContext)
+
+	const handleLogin = e =>{
+		e.preventDefault();
+		const form = new FormData(e.currentTarget);
+		const email = form.get('email');
+		const password = form.get('password');
+		console.log(email, password)
+		signIn(email, password)
+		.then(result =>{
+			console.log(result.user)
+		})
+		.catch(error =>{
+			console.error(error)
+		})
+
+	}
+
     return (
         <div>
          <div className="hero h-full" style={{backgroundImage: `url(${login})`}}>
         <div className="hero-overlay "></div>
         <div className="w-full max-w-md p-8 my-10 space-y-3 rounded-xl bg-gray-800 text-gray-100 bg-opacity-50">
 	<h1 className="text-2xl font-bold text-center">Login</h1>
-	<form noValidate="" action="" className="space-y-6">
+	<form onSubmit={handleLogin} className="space-y-6">
 		<div className="space-y-1 text-sm">
-			<label htmlFor="username" className="block text-gray-400">Username</label>
-			<input type="text" name="username" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" />
+			<label htmlFor="username" className="block text-gray-400">Email</label>
+			<input type="email" placeholder="email" name="email"  className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" required/>
 		</div>
 		<div className="space-y-1 text-sm">
 			<label htmlFor="password" className="block text-gray-400">Password</label>
