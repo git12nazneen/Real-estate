@@ -3,9 +3,11 @@ import { Link, NavLink } from 'react-router-dom';
 import logoImage from '../assets/logo.png';
 import { AuthContext } from '../provider/AuthProvider';
 
+
 const Nav = () => {
 
     const {user, logOut} = useContext(AuthContext);
+ 
 
     const handleSignOut = () => {
         logOut()
@@ -41,14 +43,13 @@ const Nav = () => {
              {navLinks}
               </ul>
           </div>
-          {/* <div className="navbar-end">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+          <div className="navbar-end">
+          {/* <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
           <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
           </div>
-      </div>  
-          </div> */}
-         {
+      </div>   */}
+        {
           user ?
           <button onClick={handleSignOut} className='btn'>Sign out</button>
           :
@@ -56,6 +57,8 @@ const Nav = () => {
           <button className='btn'>Login</button>
           </Link>
       }
+          </div>
+       
           </div>
       </div>
     );

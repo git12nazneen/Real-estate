@@ -9,6 +9,7 @@ import About from '../pages/About';
 import Product from '../pages/Product';
 import Property from '../pages/Property';
 import Contact from '../pages/Contact';
+import Privateroute from './Privateroute';
 
 const router = createBrowserRouter([
     {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/property/:id',
-        element:<Property></Property>,
+        element:<Privateroute><Property></Property></Privateroute>,
         loader:() => fetch('/fakedata.json')
       },
       {
