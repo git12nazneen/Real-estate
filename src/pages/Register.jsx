@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import registerImg from '../assets/a.jpg'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
@@ -7,6 +7,8 @@ import { AuthContext } from '../provider/AuthProvider';
 const Register = () => {
 
     const{createUser} = useContext(AuthContext);
+    const [error, setError] = useState('')
+    const [ success , setSuccess ] = useState('')
 
     const handleRegister = (e) =>{
         e.preventDefault()
@@ -15,15 +17,50 @@ const Register = () => {
         const photo = form.get('photo');
         const email = form.get('email');
         const password = form.get('password');
+        // const accepted = e.target.terms.checked;
         console.log(name, photo, email, password)
+
+
+        if(password.length < 6){
+            setError('Length must be at least 6 character');
+            return;
+        }
+        else if(!/[A-Z]/.test(password)){
+            setError('Your password should have one uppercase character')
+            return;
+        }
+        else if(!/[a-z]/.test(password)){
+            setError('Your password should have one lowercase character')
+            return;
+        }
+        // else if(!accepted){
+        //     setError('Please accept our terms and conditions')
+        //     return;
+        // }
+
+        // reset error and success
+        setSuccess('');
+        setError('');
+
+        // add validation
+
+
+
 
         // create user
         createUser(email,password)
         .then(result =>{
             console.log(result.user)
+            if(result.user.emailVerified){
+                setSuccess('user logged in success')
+            }
+            else{
+                alert()
+            }
         })
         .catch(error =>{
             console.error(error)
+            setError(error.message)
         })
 
     }
@@ -66,6 +103,12 @@ const Register = () => {
                     <button className="btn btn-primary">Register</button>
                     </div>
                 </form>
+                {
+            error && <p className="text-red-700">{error}</p>
+                }
+                {
+                    success && <p className="text-green-600">{success}</p>
+                }
                 <p className="text-center my-4">Already have an account  <Link className="text-blue-600 font-bold" to='/login'>Login</Link></p>
 
                 </div>
