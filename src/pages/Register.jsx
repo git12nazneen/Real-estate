@@ -1,7 +1,9 @@
 import React, { useContext, useState } from 'react';
 import registerImg from '../assets/a.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
+import { IoEyeOutline } from "react-icons/io5";
+import { FaRegEyeSlash } from "react-icons/fa";
 
 
 const Register = () => {
@@ -9,6 +11,11 @@ const Register = () => {
     const{createUser} = useContext(AuthContext);
     const [error, setError] = useState('')
     const [ success , setSuccess ] = useState('')
+    const [showPassword, setShowpassword] = useState(false);
+    const location = useLocation();
+	const navigate = useNavigate();
+	console.log('location in login', location)
+
 
     const handleRegister = (e) =>{
         e.preventDefault()
@@ -44,13 +51,11 @@ const Register = () => {
 
         // add validation
 
-
-
-
         // create user
         createUser(email,password)
         .then(result =>{
             console.log(result.user)
+            navigate(location?.state ? location.state : '/');
             if(result.user.emailVerified){
                 setSuccess('user logged in success')
             }
@@ -88,13 +93,21 @@ const Register = () => {
                     <label className="label">
                         <span className="label-text">Photo url</span>
                     </label>
-                    <input type="text" placeholder="photo" name="photo" className="input input-bordered"/>
+                    <input type="text" placeholder="photo" name="photo" className=" input input-bordered"/>
                     </div>
                     <div className="form-control">
                     <label className="label">
                         <span className="label-text">Password</span>
                     </label>
-                    <input type="password" placeholder="password" name="password" className="input input-bordered" required />
+                    <div className="relative mb-3 ">
+                    <input type={showPassword ? "text" : "password"} placeholder="password" name="password" className="w-full py-3 px-4 input input-bordered" required />
+                    <span className="absolute top-3 right-2"  onClick={()=> setShowpassword (!showPassword)}>
+                        {
+                            showPassword ? <IoEyeOutline /> :
+                            <FaRegEyeSlash />
+                        }
+                    </span>
+                    </div>
                     <label className="label">
                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                     </label>

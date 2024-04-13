@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import login from '../assets/login.jpg'
 
 import { AuthContext } from '../provider/AuthProvider';
@@ -9,15 +9,20 @@ import { app } from '../firebase.config';
 
 const Login = () => {
 
-	const {signIn, githubLogin} =useContext(AuthContext)
+	const {signIn, githubLogin, googleLogin} =useContext(AuthContext)
 	const auth = getAuth(app)
-	const googleProvider = new GoogleAuthProvider();
+	const location = useLocation();
+	const navigate = useNavigate();
+	console.log('location in login', location)
+
+	
 
 	const handleGoogleSignIn = () =>{
-		signInWithPopup(auth, googleProvider)
+		googleLogin()
 		.then(result =>{
-			const user = result.user;
-			console.log(user)
+			console.log(result.user)
+			// navigate after login
+			navigate(location?.state ? location.state : '/');
 		})
 		.catch(error =>{
 			// console.log('error', error.message)
@@ -30,6 +35,8 @@ const Login = () => {
 		.then(result =>{
 			const user = result.user;
 			console.log(user)
+			// navigate after login
+			navigate(location?.state ? location.state : '/');
 		})
 		.catch(error =>{
 			// console.log('error', error.message)
@@ -47,6 +54,8 @@ const Login = () => {
 		signIn(email, password)
 		.then(result =>{
 			console.log(result.user)
+			// navigate after login
+			navigate(location?.state ? location.state : '/');
 		})
 		.catch(error =>{
 			console.error(error)
