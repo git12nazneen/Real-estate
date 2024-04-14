@@ -25,28 +25,15 @@ const Register = () => {
 	  } = useForm()
 
 	  const onSubmit = (data) => {
+
         const {email, password} = data
         createUser(email, password)
         .then(result =>{
-            console.log(result)
-            // navigate(location?.state ? location.state : '/');
-            // if(result.user.emailVerified){
-            //     setSuccess('user logged in success')
-            // }
-            // else{
-            //     alert()
-            // }
-        })
-        // .catch(error =>{
-        //     console.error(error)
-        //     setError(error.message)
-        // })
-    }
-	
+			if(result.user){
+				navigate(location?.state ? location.state : '/');
+			}
+		})
 
-
-    const handleRegister = (e) =>{
-   
         if(password.length < 6){
             setError('Length must be at least 6 character');
             return;
@@ -59,15 +46,29 @@ const Register = () => {
             setError('Your password should have one lowercase character')
             return;
         }
-      
-
         // reset error and success
         setSuccess('');
         setError('');
+        
 
-        // add validation
+        // .then(result =>{
+        //     console.log(result)
+        //     // navigate(location?.state ? location.state : '/');
+            // if(result.user.emailVerified){
+            //     setSuccess('user logged in success')
+            // }
+            // else{
+            //     alert()
+            // }
+        // })
+        // .catch(error =>{
+        //     console.error(error)
+        //     setError(error.message)
+        // })
 
+       
     }
+
 
     return (
         <div>

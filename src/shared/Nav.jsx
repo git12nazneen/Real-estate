@@ -45,16 +45,16 @@ const Nav = () => {
           </div>
           <div className="navbar-end">
             {
-                user?.email ? <div className='dropdown dropdown-end'>
+                user?.email ? <div className='dropdown dropdown-end z-50'>
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
-                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    <img src={user?.photoURL ? user.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} alt="User" />
 
                     </div>
                     </label>
                     <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
                     <li>
-                        <button className='btn btn-sm btn-ghost'>Nazneen</button>
+                        <button className='btn btn-sm btn-ghost'>{user?.displayName}</button>
                         </li> 
                     <li> 
                         <button
@@ -62,21 +62,12 @@ const Nav = () => {
                         className='btn btn-sm btn-ghost'>Logout</button></li>
                     </ul>
                 </div> 
-                
                 :
                 <Link to='/login'>
                 <button className='btn'>Login</button>
                 </Link>
             }
         
-        {/* {
-          user ?
-          <button onClick={handleSignOut} className='btn'>Sign out</button>
-          :
-          <Link to='/login'>
-          <button className='btn'>Login</button>
-          </Link>
-      } */}
           </div>
        
           </div>

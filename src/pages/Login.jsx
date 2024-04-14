@@ -1,13 +1,15 @@
+import { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import login from '../assets/login.jpg'
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaRegEyeSlash } from "react-icons/fa";
 
 import { AuthContext } from '../provider/AuthProvider';
-import { useContext } from 'react';
 import { Result } from 'postcss';
 import {getAuth} from 'firebase/auth';
 import { app } from '../firebase.config';
 import { useForm } from 'react-hook-form';
+import { IoEyeOutline } from 'react-icons/io5';
+
 
 const Login = () => {
 
@@ -16,6 +18,7 @@ const Login = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
 	console.log('location in login', location)
+	const [showEye, setShowEye] = useState(false);
 
 	const {
 		register,formState: { errors },handleSubmit,} = useForm()
@@ -24,7 +27,7 @@ const Login = () => {
 
         signIn(email, password)
 		.then(result =>{
-            console.log(result)
+            console.log(result.user)
             navigate(location?.state ? location.state : '/');
         })
         .catch(error =>{
@@ -42,21 +45,6 @@ const Login = () => {
 		})
 	}
 
-	// const handleGithubLogin = () =>{
-	// 	githubLogin()
-	// 	.then(result =>{
-	// 		const user = result.user;
-	// 		console.log(user)
-	// 		// navigate after login
-	// 		navigate(location?.state ? location.state : '/');
-	// 	})
-	// 	.catch(error =>{
-	// 		// console.log('error', error.message)
-	// 		console.log( error)
-	// 	})
-	// }
-
-
     return (
         <div>
          <div className="hero h-full" style={{backgroundImage: `url(${login})`}}>
@@ -70,15 +58,25 @@ const Login = () => {
 			  {...register("email", { required: true })}
 			/>
 		</div>
-		<div className="space-y-1 text-sm">
-			<label htmlFor="password" className="block text-gray-400">Password</label>
-			<input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" 
-			  {...register("password", { required: true })}
-			/>
-			<div className="flex justify-end text-xs text-gray-400">
-				<a rel="noopener noreferrer" href="#">Forgot Password?</a>
-			</div>
-		</div>
+		<div className="form-control text-black">
+                            <label className="label">
+                                <span className="label-text text-gray-400">Password</span>
+                            </label>
+                            <div className="relative mb-3 ">
+                                <input type={showEye ? "text" : "password"} placeholder="password" name="password" className="w-full py-3 px-4 input input-bordered" 
+                                    {...register("password", { required: true })}
+                                />
+                                <span className="absolute top-3 right-2"  onClick={() => setShowEye(!showEye)}>
+                                    {
+                                        showEye ? <IoEyeOutline /> :
+                                        <FaRegEyeSlash />
+                                    }
+                                </span>
+                            </div>
+                            <label className="label">
+                                <a href="#" className="label-text-alt link link-hover text-gray-400">Forgot password?</a>
+                            </label>
+                        </div>
 		<button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-white">Sign in</button>
 	</form>
 	<div className="flex items-center pt-4 space-x-1">
