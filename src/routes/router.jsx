@@ -10,11 +10,13 @@ import Product from '../pages/Product';
 import Property from '../pages/Property';
 import Contact from '../pages/Contact';
 import Privateroute from './Privateroute';
+import Error from '../pages/Error';
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement:<Error></Error>,
       children:[
       {
         path:'/',

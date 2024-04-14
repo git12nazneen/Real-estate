@@ -5,7 +5,9 @@ import { AuthContext } from '../provider/AuthProvider';
 import { IoEyeOutline } from "react-icons/io5";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { useForm } from 'react-hook-form';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import swal from 'sweetalert';
 
 const Register = () => {
 
@@ -16,6 +18,7 @@ const Register = () => {
     const location = useLocation();
 	const navigate = useNavigate();
 	console.log('location in login', location)
+    // const [loading, setLoading] = useState(false);
 
 
     const {
@@ -25,48 +28,36 @@ const Register = () => {
 	  } = useForm()
 
 	  const onSubmit = (data) => {
-
+   
         const {email, password} = data
+        if(password.length < 6){
+            swal('Length must be at least 6 character');
+            return;
+        }
+        if(!/[A-Z]/.test(password)){
+            swal('Your password should have one uppercase character')
+            return;
+        }
+        if(!/[a-z]/.test(password)){
+            swal('Your password should have one lowercase character')
+            return;
+        }
+
         createUser(email, password)
         .then(result =>{
 			if(result.user){
+                swal("Success fully login");
 				navigate(location?.state ? location.state : '/');
 			}
 		})
-
-        if(password.length < 6){
-            setError('Length must be at least 6 character');
-            return;
-        }
-        else if(!/[A-Z]/.test(password)){
-            setError('Your password should have one uppercase character')
-            return;
-        }
-        else if(!/[a-z]/.test(password)){
-            setError('Your password should have one lowercase character')
-            return;
-        }
-        // reset error and success
-        setSuccess('');
-        setError('');
-        
-
-        // .then(result =>{
-        //     console.log(result)
-        //     // navigate(location?.state ? location.state : '/');
-            // if(result.user.emailVerified){
-            //     setSuccess('user logged in success')
-            // }
-            // else{
-            //     alert()
-            // }
-        // })
-        // .catch(error =>{
-        //     console.error(error)
-        //     setError(error.message)
-        // })
-
-       
+        .catch(error => {
+            swal('Sign in failed!');
+            console.error('Sign in error:', error);
+          })
+          
+            // reset error and success
+            setSuccess('');
+            setError('');
     }
 
 
@@ -139,6 +130,7 @@ const Register = () => {
             </div>
          
         </div>
+        <ToastContainer />
         </div>
     );
 };
