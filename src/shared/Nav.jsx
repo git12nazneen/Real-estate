@@ -44,19 +44,39 @@ const Nav = () => {
               </ul>
           </div>
           <div className="navbar-end">
-          {/* <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-          <div className="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-          </div>
-      </div>   */}
-        {
+            {
+                user?.email ? <div className='dropdown dropdown-end'>
+                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                    <div className="w-10 rounded-full">
+                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+
+                    </div>
+                    </label>
+                    <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+                    <li>
+                        <button className='btn btn-sm btn-ghost'>Nazneen</button>
+                        </li> 
+                    <li> 
+                        <button
+                        onClick={handleSignOut}
+                        className='btn btn-sm btn-ghost'>Logout</button></li>
+                    </ul>
+                </div> 
+                
+                :
+                <Link to='/login'>
+                <button className='btn'>Login</button>
+                </Link>
+            }
+        
+        {/* {
           user ?
           <button onClick={handleSignOut} className='btn'>Sign out</button>
           :
           <Link to='/login'>
           <button className='btn'>Login</button>
           </Link>
-      }
+      } */}
           </div>
        
           </div>

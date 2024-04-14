@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import { IoEyeOutline } from "react-icons/io5";
 import { FaRegEyeSlash } from "react-icons/fa";
+import { useForm } from 'react-hook-form';
 
 
 const Register = () => {
@@ -17,17 +18,35 @@ const Register = () => {
 	console.log('location in login', location)
 
 
+    const {
+		register,
+		formState: { errors },
+		handleSubmit,
+	  } = useForm()
+
+	  const onSubmit = (data) => {
+        const {email, password} = data
+        createUser(email, password)
+        .then(result =>{
+            console.log(result)
+            // navigate(location?.state ? location.state : '/');
+            // if(result.user.emailVerified){
+            //     setSuccess('user logged in success')
+            // }
+            // else{
+            //     alert()
+            // }
+        })
+        // .catch(error =>{
+        //     console.error(error)
+        //     setError(error.message)
+        // })
+    }
+	
+
+
     const handleRegister = (e) =>{
-        e.preventDefault()
-        const form = new FormData(e.currentTarget);
-        const name = form.get('name');
-        const photo = form.get('photo');
-        const email = form.get('email');
-        const password = form.get('password');
-        // const accepted = e.target.terms.checked;
-        console.log(name, photo, email, password)
-
-
+   
         if(password.length < 6){
             setError('Length must be at least 6 character');
             return;
@@ -40,33 +59,13 @@ const Register = () => {
             setError('Your password should have one lowercase character')
             return;
         }
-        // else if(!accepted){
-        //     setError('Please accept our terms and conditions')
-        //     return;
-        // }
+      
 
         // reset error and success
         setSuccess('');
         setError('');
 
         // add validation
-
-        // create user
-        createUser(email,password)
-        .then(result =>{
-            console.log(result.user)
-            navigate(location?.state ? location.state : '/');
-            if(result.user.emailVerified){
-                setSuccess('user logged in success')
-            }
-            else{
-                alert()
-            }
-        })
-        .catch(error =>{
-            console.error(error)
-            setError(error.message)
-        })
 
     }
 
@@ -76,31 +75,39 @@ const Register = () => {
              <div className=" hero-overlay hero-content flex-col lg:flex-row-reverse">
                  
                 <div className="card  w-3/6 shrink-0  max-w-sm shadow-2xl bg-base-100">
-                <form onSubmit={handleRegister} className="card-body">
+                <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                     <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
-                    <input type="email" placeholder="email" name="email" className="input input-bordered" required />
+                    <input type="email" placeholder="email" name="email" className="input input-bordered"
+                     {...register("email", { required: true })}
+                    />
                     </div>
                     <div className="form-control">
                     <label className="label">
                         <span className="label-text">Name</span>
                     </label>
-                    <input type="text" placeholder="name" name="name" className="input input-bordered" required />
+                    <input type="text" placeholder="name" name="name" className="input input-bordered" 
+                      {...register("name", { required: true })}
+                    />
                     </div>
                     <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Photo url</span>
+                        <span className="label-text">Image url</span>
                     </label>
-                    <input type="text" placeholder="photo" name="photo" className=" input input-bordered"/>
+                    <input type="text" placeholder="image url" name="image" className=" input input-bordered"
+                      {...register("image")}
+                    />
                     </div>
                     <div className="form-control">
                     <label className="label">
                         <span className="label-text">Password</span>
                     </label>
                     <div className="relative mb-3 ">
-                    <input type={showPassword ? "text" : "password"} placeholder="password" name="password" className="w-full py-3 px-4 input input-bordered" required />
+                    <input type={showPassword ? "text" : "password"} placeholder="password" name="password" className="w-full py-3 px-4 input input-bordered" 
+                      {...register("password", { required: true })}
+                    />
                     <span className="absolute top-3 right-2"  onClick={()=> setShowpassword (!showPassword)}>
                         {
                             showPassword ? <IoEyeOutline /> :
@@ -117,7 +124,7 @@ const Register = () => {
                     </div>
                 </form>
                 {
-            error && <p className="text-red-700">{error}</p>
+                     error && <p className="text-red-700">{error}</p>
                 }
                 {
                     success && <p className="text-green-600">{success}</p>
