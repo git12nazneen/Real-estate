@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { app } from '../firebase.config';
 export const AuthContext = createContext(null)
 
@@ -41,6 +41,19 @@ const AuthProvider = ({children}) => {
         return signInWithPopup(auth, facebookProvider)
     }
 
+    // update user profile
+    const updateUserProfile = (name, image) =>{
+       return updateProfile(auth.currentUser, {
+            displayName: name,
+             photoURL: image
+          }).then(() => {
+            // Profile updated!
+            // ...
+          }).catch((error) => {
+            // An error occurred
+            // ...
+          });
+    }
    
 
     const logOut = () =>{
@@ -67,7 +80,8 @@ const AuthProvider = ({children}) => {
         githubLogin,
         googleLogin,
         loading,
-        facebookLogin
+        facebookLogin,
+        updateUserProfile
     }
 
     return (

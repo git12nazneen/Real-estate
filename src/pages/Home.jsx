@@ -1,12 +1,8 @@
-import React from 'react';
-import Nav from '../shared/Nav';
 import Banner from '../components/Banner/Banner';
-import Footer from '../shared/Footer';
-import Copyright from './Copyright';
 import Faq from '../components/Faq';
-
 import { useLoaderData } from 'react-router-dom';
 import Estate from '../components/Estate';
+import PageTitle from '../components/PageTitle';
 
 
 const Home = () => {
@@ -16,7 +12,7 @@ const Home = () => {
 
     return (
         <div>
-      
+            <PageTitle title='Home Page'></PageTitle>
             <Banner></Banner>
              <div className="space-y-2 text-center py-8 bg-gray-100">
                     <h2 className="text-3xl font-bold text-red-800">Estates</h2>

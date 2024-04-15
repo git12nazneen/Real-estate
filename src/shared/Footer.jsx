@@ -15,7 +15,7 @@ const Footer = () => {
 					<div className='h-24 w-24'>
                         <img src={png} alt="" />
                     </div>
-                    <small className='font-light text-red-100 pt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt modi rerum qui laborum, ipsum excepturi id hic dolore aut amet consequuntur reiciendis, </small>
+                    <small className='font-light text-red-100 pt-3'>Discover your dream home with BrivIn. Our team is dedicated to helping you find the perfect property tailored to your needs. Whether you're looking for a cozy apartment, a spacious family home,  we're here to guide you every step of the way.. Welcome to a world of possibilities with BrivIn.</small>
 				</div>
 			
 			</a>
