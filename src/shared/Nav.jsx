@@ -23,10 +23,10 @@ const Nav = () => {
     <li><NavLink to='/contact'>Contact</NavLink></li>
     
     </>
-
+// bg-faf0f0
     return (
         <div className='max-w-6xl mx-auto'>
-        <div className="navbar bg-faf0f0">
+        <div className="navbar bg-opacity-15">
           <div className="navbar-start">
               <div className="dropdown">
               <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -54,7 +54,7 @@ const Nav = () => {
                     </label>
                     <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
                     <li>
-                        <button className='btn btn-sm btn-ghost'>{user?.displayName}</button>
+                        <button className='btn btn-sm btn-ghost'>{user?.displayName || 'name not found'}</button>
                         </li> 
                     <li> 
                         <button

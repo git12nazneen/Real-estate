@@ -18,3 +18,45 @@
     height: 570px;
     object-fit: cover;
   }
+
+  /* .slide-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.text-container {
+    position: absolute;
+    bottom: 20px; /* Adjust this value to change the vertical position */
+    /* left: 20px; /* Adjust this value to change the horizontal position */
+    /* color: white;
+    z-index: 10;  */
+
+/* .swiper-text {
+    font-size: 24px; /* Adjust font size as needed */
+
+
+    .slide-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+  }
+  
+  .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to change the darkness of the overlay */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+  
+  .swiper-text {
+      color: white;
+      font-size: 24px;
+  }
+  

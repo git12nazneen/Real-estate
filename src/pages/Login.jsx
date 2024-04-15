@@ -9,6 +9,7 @@ import {getAuth} from 'firebase/auth';
 import { app } from '../firebase.config';
 import { useForm } from 'react-hook-form';
 import { IoEyeOutline } from 'react-icons/io5';
+import PageTitle from '../components/PageTitle';
 
 
 const Login = () => {
@@ -47,6 +48,7 @@ const Login = () => {
 
     return (
         <div>
+			<PageTitle title='Login'></PageTitle>
          <div className="hero h-full" style={{backgroundImage: `url(${login})`}}>
         <div className="hero-overlay "></div>
         <div className="w-full max-w-md p-8 my-10 space-y-3 rounded-xl bg-gray-800 text-gray-100 bg-opacity-50">
@@ -63,10 +65,10 @@ const Login = () => {
                                 <span className="label-text text-gray-400">Password</span>
                             </label>
                             <div className="relative mb-3 ">
-                                <input type={showEye ? "text" : "password"} placeholder="password" name="password" className="w-full py-3 px-4 input input-bordered" 
+                                <input type={showEye ? "text" : "password"} placeholder="password" name="password" className="w-full py-3 px-4 input input-bordered bg-gray-900" 
                                     {...register("password", { required: true })}
                                 />
-                                <span className="absolute top-3 right-2"  onClick={() => setShowEye(!showEye)}>
+                                <span className="absolute top-3 right-2 text-white"  onClick={() => setShowEye(!showEye)}>
                                     {
                                         showEye ? <IoEyeOutline /> :
                                         <FaRegEyeSlash />

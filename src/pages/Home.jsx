@@ -12,7 +12,7 @@ const Home = () => {
 
     return (
         <div>
-            <PageTitle title='Home Page'></PageTitle>
+            <PageTitle title='Home'></PageTitle>
             <Banner></Banner>
              <div className="space-y-2 text-center py-8 bg-gray-100">
                     <h2 className="text-3xl font-bold text-red-800">Estates</h2>

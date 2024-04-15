@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { FaHandPointRight } from "react-icons/fa";
+import PageTitle from '../components/PageTitle';
 const Property = () => {
 
     const properties = useLoaderData()
@@ -12,6 +13,7 @@ const Property = () => {
 
     return (
         <div className='max-w-6xl mx-auto my-5'>
+            <PageTitle title='Property'></PageTitle>
            <div className="card lg:card-side bg-rose-100 shadow-xl">
             <figure><img className='w-96 h-96' src={property.image} alt="Album"/></figure>
             <div className="card-body space-y-3">

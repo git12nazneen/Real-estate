@@ -4,10 +4,12 @@ import aboutImg from '../assets/abou1.jpg'
 import { CiStar } from "react-icons/ci";
 import { FaDigitalOcean } from "react-icons/fa";
 import { SiAntdesign } from "react-icons/si";
+import PageTitle from '../components/PageTitle';
 
 const About = () => {
     return (
         <div>
+            <PageTitle title='About'></PageTitle>
             <div>
             <div className="hero bg-rose-100">
                 <div className="hero-content flex-col lg:flex-row-reverse">

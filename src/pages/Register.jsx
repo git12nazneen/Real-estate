@@ -6,6 +6,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { useForm } from 'react-hook-form';
 import swal from 'sweetalert';
+import PageTitle from '../components/PageTitle';
 
 const Register = () => {
 
@@ -27,7 +28,7 @@ const Register = () => {
 
 	  const onSubmit = (data) => {
    
-        const {email, password} = data
+        const {email, password ,image, name} = data
         if(password.length < 6){
             swal('Length must be at least 6 character');
             return;
@@ -40,13 +41,17 @@ const Register = () => {
             swal('Your password should have one lowercase character')
             return;
         }
-
-        createUser(email, password)
+        // create user and update profile
+        createUser(email, password, image, name)
         .then(result =>{
-			if(result.user){
-                swal("Success fully login");
-				navigate(location?.state ? location.state : '/');
-			}
+            updateUserProfile(name, image)
+            .then( ()=>{
+                if(result.user){
+                    swal("Success fully login");
+                    navigate(location?.state ? location.state : '/');
+                }
+            })
+			
 		})
         .catch(error => {
             swal('Sign in failed!');
@@ -62,6 +67,7 @@ const Register = () => {
 
     return (
         <div>
+            <PageTitle title='Register'></PageTitle>
              <div className="hero h-full" style={{backgroundImage: `url(${registerImg})`}}>
              <div className=" hero-overlay hero-content flex-col lg:flex-row-reverse">
                  

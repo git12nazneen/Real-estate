@@ -1,9 +1,12 @@
 import React from 'react';
 import Leaflet from './Leaflet';
+import PageTitle from '../components/PageTitle';
 
 const Contact = () => {
   return (
-    <div>
+	
+    <div className='z-50'>
+		<PageTitle title='Contact'></PageTitle>
    <Leaflet></Leaflet>
    <section className="py-6 bg-gray-100 text-gray-900">
 	<div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
