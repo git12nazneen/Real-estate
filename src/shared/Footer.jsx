@@ -84,10 +84,10 @@ const Footer = () => {
 				</ul>
                 <form className='space-y-5'>
                 <div className=''>
-               		 <input type="email" placeholder="Enter your email" className="w-64 px-5 py-4 text-center" required />       
+               		 <input type="email" placeholder="Enter your email" className="lg:w-64 w-64 md:w-52 px-5 py-4 text-center" required />       
                 </div>
-                <div className='  text-center '>
-                	<button type="submit" placeholder="Submit" className="w-64 bg-black py-4 ">Submit</button>
+                <div className='text-center '>
+                	<button type="submit" placeholder="Submit" className="w-64 lg:w-64 md:w-52  bg-black py-4 ">Submit</button>
                 </div>
                 </form>
 			</div>

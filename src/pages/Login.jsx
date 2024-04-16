@@ -59,7 +59,7 @@ const Login = () => {
 			<PageTitle title='Login'></PageTitle>
          <div className="hero h-full" style={{backgroundImage: `url(${login})`}}>
         <div className="hero-overlay "></div>
-        <div className="w-full max-w-md p-8 my-10 space-y-3 rounded-xl bg-gray-800 text-gray-100 bg-opacity-50">
+        <div className="w-full lg:max-w-md max-w-sm p-8 my-10 space-y-3 rounded-xl bg-gray-800 text-gray-100 bg-opacity-50">
 	<h1 className="text-2xl font-bold text-center">Login</h1>
 	<form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
 		<div className="space-y-1 text-sm">
@@ -117,7 +117,7 @@ const Login = () => {
     <a rel="noopener noreferrer" href="#" className="underline text-gray-100">Register</a>
     </Link>
 	</p>
-</div>
+		</div>
 
         </div>
         </div>

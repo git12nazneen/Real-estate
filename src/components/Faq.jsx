@@ -5,7 +5,7 @@ const Faq = () => {
     return (
         <div className=''>
           <div className="hero min-h-screen  max-w-6xl mx-auto">
-            <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero-content flex-col lg:flex-row-reverse md:flex-row-reverse">
                 
                 <div className='w:6/6 lg:w-3/6 space-y-5 '>
                         <h1 className='text-red-800 font-extrabold text-3xl text-center lg:text-left'>Frequiently Asked Questions</h1>

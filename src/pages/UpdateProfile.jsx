@@ -1,101 +1,3 @@
-
-// import React, { useContext, useEffect, useState } from 'react';
-// import PageTitle from '../components/PageTitle';
-// import { AuthContext } from '../provider/AuthProvider';
-// import { useForm } from 'react-hook-form';
-
-// const UpdateProfile = () => {
-//     const { user , updateUserProfile } = useContext(AuthContext);
-//     const [imageSrc, setImageSrc] = useState(user?.photoURL);
-//     const {
-//         register,
-//         formState: { errors },
-//         handleSubmit, 
-//         setValue
-//     } = useForm(
-//         {
-//             defaultValues: {
-//               firstName: 'John', // Set default value for firstName field
-//               lastName: 'Doe',   // Set default value for lastName field
-//               // Add default values for other fields here
-//             }
-//           }
-//     );
-
-//      useEffect(() => {
-//         setValue('email', user?.email);
-//         setValue('name', user?.displayName);
-//         setValue('image', user?.photoURL);
-//     }, [user, setValue]);
-
-
-//     const onSubmit = (data) => {
-//         console.log("Updated data:", data);
-       
-//         updateUserProfile(data.name, data.image)
-//         .then( ()=>{
-//             if(Result.user){
-
-//             }
-//             swal("Success update");
-            
-//         })
-//         if (data.image !== imageSrc) {
-//             setImageSrc(data.image);
-//         }
-//     };
-
-//     return (
-//         <div>
-//              <PageTitle title='Update profile'></PageTitle>
-//              <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900 mx-auto shadow-xl shadow-gray-700 my-10" >
-//                 <div className="mb-8 text-center">
-//                     <div className='rounded-full items-center'>
-//                          <img className='rounded-full  mx-auto shadow-xl shadow-slate-400' src={imageSrc} alt="" />
-//                     </div>
-//                     <p className="text-sm text-gray-400">{}</p>
-//                 </div>
-//                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-12"> 
-//                     <div className="space-y-4">
-//                         <div className="form-control">
-//                             <label className="label ">
-//                                 <span className="label-text ">Email</span>
-//                             </label>
-//                             <input type="email" placeholder="email" name="email" className="input input-bordered "
-//                                 {...register("email", { required: true })}
-//                             />
-//                         </div>
-//                         <div className="form-control">
-//                             <label className="label ">
-//                                 <span className="label-text ">Name</span>
-//                             </label>
-//                             <input type="text" placeholder="name" name="name" className="input input-bordered "
-//                                 {...register("name", { required: true })}
-//                             />
-//                         </div>  
-//                         <div className="form-control">
-//                             <label className="label ">
-//                                 <span className="label-text ">Img url</span>
-//                             </label>
-//                             <input type="text" placeholder="image url" name="image" className=" input input-bordered "
-//                                 {...register("image")}
-//                             />
-//                         </div>
-//                     </div>
-//                     <div className="space-y-2">
-//                         <div>
-//                             <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md bg-rose-950 text-white">Update</button> 
-//                         </div> 
-//                     </div>
-//                 </form>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default UpdateProfile;
-
-
 import React, { useContext, useEffect, useState } from 'react';
 import PageTitle from '../components/PageTitle';
 import { AuthContext } from '../provider/AuthProvider';
@@ -112,9 +14,9 @@ const UpdateProfile = () => {
         setValue
     } = useForm({
         defaultValues: {
-            email: user?.email || '', // Set default value for email field
-            name: user?.displayName || '', // Set default value for name field
-            image: user?.photoURL || '', // Set default value for image field
+            email: user?.email || '', 
+            name: user?.displayName || '', 
+            image: user?.photoURL || '', 
         }
     });
 
@@ -131,8 +33,6 @@ const UpdateProfile = () => {
         updateUserProfile(data.name, data.image)
         
         .then( ()=>{
-            // if(Result.user){
-                // }
                 window.location.reload()
                 swal("Success update");
         })
