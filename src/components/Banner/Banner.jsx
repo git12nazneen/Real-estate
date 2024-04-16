@@ -20,7 +20,6 @@ import banner4 from '../../assets/banner5.jpg'
 
 const Banner = () => {
 
- 
 
     return (
         <>
