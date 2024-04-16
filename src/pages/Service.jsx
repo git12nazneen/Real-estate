@@ -15,27 +15,27 @@ const Service = () => {
                     <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
                         <img src={service1} alt="" className="h-80 bg-gray-500 aspect-video" />
                         <div className="flex flex-col justify-center flex-1 p-6 bg-rose-200">
-                            <span className="text-xs uppercase text-gray-900">Join, it's free</span>
-                            <h3 className="text-3xl font-bold">We're not reinventing the wheel</h3>
-                            <p className="my-6 text-gray-900">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquam possimus quas, error esse quos.</p>
+                            <span className="text-xs uppercase text-gray-900">Warhouse</span>
+                            <h3 className="text-3xl font-bold">Property Management</h3>
+                            <p className="my-6 text-gray-900"> Our experienced property management team ensures the efficient operation and maintenance of industrial properties, providing proactive maintenance, tenant relations management, and financial oversight to maximize asset performance.</p>
                             <button type="button" className="self-start">Action</button>
                         </div>
                     </div>
                     <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse">
                         <img src={service} alt="" className="h-80 bg-gray-500 aspect-video" />
                         <div className="flex flex-col justify-center flex-1 p-6 bg-rose-200">
-                            <span className="text-xs uppercase text-gray-900">Join, it's free</span>
-                            <h3 className="text-3xl font-bold">We're not reinventing the wheel</h3>
-                            <p className="my-6 text-gray-900">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquam possimus quas, error esse quos.</p>
+                            <span className="text-xs uppercase text-gray-900">Cold storage</span>
+                            <h3 className="text-3xl font-bold">Customized Solutions</h3>
+                            <p className="my-6 text-gray-900">Recognizing that every client and every property is unique, we provide personalized solutions tailored to your specific needs and objectives, delivering results that exceed expectations.</p>
                             <button type="button" className="self-start">Action</button>
                         </div>
                     </div>
                     <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
                         <img src={service2} alt="" className="h-80 bg-gray-500 aspect-video" />
                         <div className="flex flex-col justify-center flex-1 p-6 bg-rose-200">
-                            <span className="text-xs uppercase text-gray-900">Join, it's free</span>
-                            <h3 className="text-3xl font-bold">We're not reinventing the wheel</h3>
-                            <p className="my-6 text-gray-900">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquam possimus quas, error esse quos.</p>
+                            <span className="text-xs uppercase text-gray-900">Power production</span>
+                            <h3 className="text-3xl font-bold">Site Identification and Acquisition</h3>
+                            <p className="my-6 text-gray-900">We assist clients in identifying suitable sites for power plant development, considering factors such as proximity to fuel sources, transmission infrastructure, environmental considerations, and regulatory requirements.</p>
                             <button type="button" className="self-start">Action</button>
                         </div>
                     </div>

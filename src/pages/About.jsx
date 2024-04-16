@@ -21,7 +21,7 @@ const About = () => {
                         <h1 className='text-3xl font-extrabold'>Why should choose <br />
                             our agency?</h1>
                         <h2 className='text-red-800'>Lorem ipsum, dolor sit amet consectetur adipisicing.</h2>
-                        <p className='font-light text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quidem magnam ipsum atque. Eius fugit necessitatibus earum labore eum voluptas? Sint porro iusto nemo cum? Alias sed, autem cumque voluptate in maiores! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, dolorem!</p>
+                        <p className='font-light text-sm'>At BrivIn, we specialize in providing comprehensive real estate solutions for clients involved in the power generation sector. With our deep understanding of the unique challenges and opportunities in this industry, we offer a range of services to support your power plant real estate needs</p>
                         <div className='flex flex-wrap lg:flex-row items-center justify-center border-8 border-red-800 py-6 px-5'>
                             <div className='flex-1'>
                                 <div className='flex'>
@@ -30,7 +30,7 @@ const About = () => {
                                   
                                     </div>
                                     <div className='ml-2'>
-                                        <h1 className='text-sm font-bold'>Leader in <br /> digital</h1>
+                                        <h1 className='text-sm font-bold'>Power  <br /> plants</h1>
                                         <p className='text-sm font-light text-red-800'>marketing</p>
                                     </div>
                                 </div>
@@ -41,7 +41,7 @@ const About = () => {
                                     <div className='bg-red-800 rounded-full p-2 font-extralight text-4xl'> <FaDigitalOcean /></div>
                                     </div>
                                     <div className='ml-2'>
-                                        <h1 className='text-sm font-bold'>Leader in <br /> digital</h1>
+                                        <h1 className='text-sm font-bold'>Factories </h1>
                                         <p className='text-sm font-light text-red-800'>marketing</p>
                                     </div>
                                 </div>
@@ -52,7 +52,7 @@ const About = () => {
                                     <div className='bg-red-800 rounded-full font-extralight p-2 text-4xl'> <SiAntdesign /></div>
                                     </div>
                                     <div className='ml-2'>
-                                        <h1 className='text-sm font-bold'>Leader in <br /> digital</h1>
+                                        <h1 className='text-sm font-bold'>Industrial<br /> parks</h1>
                                         <p className='text-sm font-light text-red-800'>marketing</p>
                                     </div>
                                 </div>

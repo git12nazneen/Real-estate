@@ -12,8 +12,8 @@ const Footer = () => {
 		<div className="lg:w-1/3 space-y-5">
 			<a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
 				<div className="items-center justify-center  rounded-full ">
-					<div className='h-24 w-24'>
-                        <img src={png} alt="" />
+					<div className=''>
+                        <img className='mx-auto lg:mx-0 h-24 w-24' src={png} alt="" />
                     </div>
                     <small className='font-light text-red-100 pt-3'>Discover your dream home with BrivIn. Our team is dedicated to helping you find the perfect property tailored to your needs. Whether you're looking for a cozy apartment, a spacious family home,  we're here to guide you every step of the way.. Welcome to a world of possibilities with BrivIn.</small>
 				</div>
@@ -75,7 +75,7 @@ const Footer = () => {
 					</li>
 				</ul>
 			</div>
-			<div className="space-y-3 items-center">
+			<div className="space-y-3 w-full sm:col-span-1 col-span-2">
 				<h3 className="uppercase font-bold text-xl  text-gray-50">Newsletter</h3>
 				<ul className="space-y-5">
 					<li className='font-light text-red-100'>
@@ -84,10 +84,10 @@ const Footer = () => {
 				</ul>
                 <form className='space-y-5'>
                 <div className=''>
-                <input type="email" placeholder="Enter your email" className="w-64 px-5 py-4 text-center" required />       
+               		 <input type="email" placeholder="Enter your email" className="w-64 px-5 py-4 text-center" required />       
                 </div>
-                <div className='w-64 bg-black text-center '>
-                <button type="submit" placeholder="Submit" className=" px-5 py-4 grow">Submit</button>
+                <div className='  text-center '>
+                	<button type="submit" placeholder="Submit" className="w-64 bg-black py-4 ">Submit</button>
                 </div>
                 </form>
 			</div>

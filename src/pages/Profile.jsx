@@ -1,7 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import PageTitle from '../components/PageTitle';
 import { AuthContext } from '../provider/AuthProvider';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
 const Profile = () => {
     const{user} = useContext(AuthContext);
@@ -12,10 +13,11 @@ const Profile = () => {
         setValue
 	  } = useForm()
 
-      setValue('email', user?.email);
-      setValue('name', user?.displayName);
-      setValue('image', user?.photoURL);
-
+      useEffect(() => {
+        setValue('email', user?.email);
+        setValue('name', user?.displayName);
+        setValue('image', user?.photoURL);
+    }, [user, setValue]);
     return (
         <div>
            <PageTitle title='Profile'></PageTitle>
@@ -55,7 +57,9 @@ const Profile = () => {
                     </div>
                     <div className="space-y-2">
                         <div>
-                            <button type="button" className="w-full px-8 py-3 font-semibold rounded-md bg-rose-950 text-white">Update Profile</button>
+                        <Link to='/updateProfile'>
+                         <button  type="button" className="w-full px-8 py-3 font-semibold rounded-md bg-rose-950 text-white">Update Profile</button>
+                         </Link>
                         </div>
                         
                     </div>

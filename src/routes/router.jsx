@@ -6,12 +6,13 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Service from '../pages/Service';
 import About from '../pages/About';
-import Product from '../pages/Product';
+
 import Property from '../pages/Property';
 import Contact from '../pages/Contact';
 import Privateroute from './Privateroute';
 import Error from '../pages/Error';
 import Profile from '../pages/Profile';
+import UpdateProfile from '../pages/UpdateProfile';
 
 const router = createBrowserRouter([
     {
@@ -50,13 +51,13 @@ const router = createBrowserRouter([
         element:<About></About>
       },
       {
-        path:'/product',
-        element:<Product></Product>
-      },
-      {
         path:'/profile',
         element:<Privateroute><Profile></Profile></Privateroute>
-      }
+      },
+      {
+        path:'/updateProfile',
+        element:<Privateroute><UpdateProfile></UpdateProfile></Privateroute>
+      },
       ]
     },
   ]);

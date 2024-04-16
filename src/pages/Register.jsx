@@ -127,10 +127,8 @@ const Register = () => {
                     success && <p className="text-green-600">{success}</p>
                 }
                 <p className="text-center my-4 text-gray-100">Already have an account  <Link className="text-sky-600 font-bold" to='/login'>Login</Link></p>
-
                 </div>
                 <div className="text-center lg:text-left w-3/6">
-               
                  </div>
             </div>
          

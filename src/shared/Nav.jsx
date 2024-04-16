@@ -19,16 +19,18 @@ const Nav = () => {
     <li><NavLink to='/'>Home</NavLink></li>
     <li><NavLink to='/about'>About</NavLink></li>
     <li><NavLink to='/service'>Service</NavLink></li>
-    <li><NavLink to='/product'>Product</NavLink></li>
+    {/* <li><NavLink to='/product'>Product</NavLink></li> */}
     <li><NavLink to='/contact'>Contact</NavLink></li>
     
     </>
-// bg-faf0f0
+// bg-faf0f0z
     return (
-        <div className='max-w-6xl mx-auto'>
-        <div className="navbar bg-opacity-15">
-          <div className="navbar-start z-50">
-              <div className="dropdown">
+        <div className='max-w-6xl mx-auto mb-20'>
+        {/* <div className="navbar text-white mx-auto py-3 z-30 lg:px-10  bg-transparent" style='position:fixed'> */}
+        <div className="navbar text-black py-2 lg:px-10 bg-white bg-opacity-60 fixed top-0 left-0 right-0 z-50">
+       
+          <div className="navbar-start ">
+              <div className="dropdown z-50">
               <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
               </div>
@@ -56,7 +58,7 @@ const Nav = () => {
                     <li>
                         <button className='btn btn-sm btn-ghost'>{user?.displayName || 'name not found'}</button>
                      </li> 
-                    <li> 
+                    <li className='text-center items-center'> 
                         
                         <NavLink to='/profile'>Profile</NavLink>
                     </li>
@@ -69,7 +71,11 @@ const Nav = () => {
                 </div> 
                 :
                 <Link to='/login'>
-                <button className='btn'>Login</button>
+                    <a href="#_" class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-rose-950 rounded hover:bg-white group">
+                        <span class="w-48 h-48 rounded rotate-[-40deg] bg-purple-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                        <span class="relative w-full text-left text-white transition-colors duration-300 ease-in-out group-hover:text-white">Login</span>
+                     </a>
+                {/* <button className='btn'></button> */}
                 </Link>
             }
         
