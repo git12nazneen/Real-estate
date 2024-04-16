@@ -7,9 +7,9 @@ const Faq = () => {
           <div className="hero min-h-screen  max-w-6xl mx-auto">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 
-                <div className='w-3/6 space-y-5 '>
-                        <h1 className='text-red-800 font-extrabold text-3xl'>Frequiently Asked Questions</h1>
-                        <small className=' font-light '>Here are some frequently asked questions (FAQs) related to industrial facilities like warehouses, factories, production plants, industrial parks, cold storage facilities, power plants, etc., along with their answers:</small>
+                <div className='w:6/6 lg:w-3/6 space-y-5 '>
+                        <h1 className='text-red-800 font-extrabold text-3xl text-center lg:text-left'>Frequiently Asked Questions</h1>
+                        <small className=' font-light text-center lg:text-left'>Here are some frequently asked questions (FAQs) related to industrial facilities like warehouses, factories, production plants, industrial parks, cold storage facilities, power plants, etc., along with their answers:</small>
                          <div className="collapse collapse-plus bg-rose-200">
                         <input type="radio" name="my-accordion-3" defaultChecked /> 
                         <div className="collapse-title ">
@@ -38,7 +38,7 @@ const Faq = () => {
                         </div>
                         </div>
                 </div>
-                <div className='w-3/6'>
+                <div className='w:6/6 lg:w-3/6'>
                    <div className=' '>
                      <img className='rounded-t-full h-full border-red-800 border-8 shadow-lg shadow-gray-700' src={faq} alt="" />
                      </div>

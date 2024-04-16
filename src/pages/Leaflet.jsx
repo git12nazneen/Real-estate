@@ -1,11 +1,11 @@
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import './Leaflet.css'; // Import CSS file for styling
+import './Leaflet.css';
 
 const position = [23.789712258935243, 90.39468674368977];
 
 const Leaflet = () => (
-  <div className="leaflet-container mx-auto"> {/* Wrap MapContainer in a div for styling */}
+  <div className="leaflet-container mx-auto "> 
     <MapContainer center={position} zoom={12} scrollWheelZoom={false} className="leaflet-map">
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

@@ -3,6 +3,7 @@ import Faq from '../components/Faq';
 import { useLoaderData } from 'react-router-dom';
 import Estate from '../components/Estate';
 import PageTitle from '../components/PageTitle';
+import Review from '../components/Review';
 
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Home = () => {
                 ></Estate>)
             }
            </div>
+           <Review></Review>
             <Faq></Faq>
         </div>
     );

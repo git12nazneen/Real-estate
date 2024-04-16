@@ -1,5 +1,4 @@
 import React from 'react';
-import Nav from '../shared/Nav';
 import aboutImg from '../assets/abou1.jpg'
 import { CiStar } from "react-icons/ci";
 import { FaDigitalOcean } from "react-icons/fa";
@@ -13,7 +12,7 @@ const About = () => {
             <div>
             <div className="hero bg-rose-100">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="max-w-lg card shrink-0 w-full  ">
+                    <div className="max-w-lg card shrink-0 w-80 lg:w-full  ">
                         <div>
                             <img className='rounded-full shadow-3xl border-white border-8 shadow-slate-500' src={aboutImg} alt="" />
                         </div>
@@ -23,7 +22,7 @@ const About = () => {
                             our agency?</h1>
                         <h2 className='text-red-800'>Lorem ipsum, dolor sit amet consectetur adipisicing.</h2>
                         <p className='font-light text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quidem magnam ipsum atque. Eius fugit necessitatibus earum labore eum voluptas? Sint porro iusto nemo cum? Alias sed, autem cumque voluptate in maiores! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, dolorem!</p>
-                        <div className='flex border-8 border-red-800 py-6 px-5'>
+                        <div className='flex flex-wrap lg:flex-row items-center justify-center border-8 border-red-800 py-6 px-5'>
                             <div className='flex-1'>
                                 <div className='flex'>
                                     <div>

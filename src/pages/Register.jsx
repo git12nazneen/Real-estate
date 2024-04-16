@@ -71,7 +71,7 @@ const Register = () => {
              <div className="hero h-full" style={{backgroundImage: `url(${registerImg})`}}>
              <div className=" hero-overlay hero-content flex-col lg:flex-row-reverse">
                  
-                <div className="card  w-3/6 shrink-0  max-w-sm shadow-2xl bg-gray-900 bg-opacity-500">
+                <div className="card w-6/6  lg:w-3/6 shrink-0  max-w-sm shadow-2xl bg-gray-900 bg-opacity-500">
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                     <div className="form-control">
                     <label className="label ">
@@ -117,7 +117,7 @@ const Register = () => {
                     </label>
                     </div>
                     <div className="form-control mt-6">
-                    <button className="btn bg-sky-500">Register</button>
+                    <button className="btn bg-sky-600 text-white">Register</button>
                     </div>
                 </form>
                 {
@@ -126,7 +126,7 @@ const Register = () => {
                 {
                     success && <p className="text-green-600">{success}</p>
                 }
-                <p className="text-center my-4 text-gray-100">Already have an account  <Link className="text-blue-600 font-bold" to='/login'>Login</Link></p>
+                <p className="text-center my-4 text-gray-100">Already have an account  <Link className="text-sky-600 font-bold" to='/login'>Login</Link></p>
 
                 </div>
                 <div className="text-center lg:text-left w-3/6">

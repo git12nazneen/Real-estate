@@ -11,6 +11,7 @@ import Property from '../pages/Property';
 import Contact from '../pages/Contact';
 import Privateroute from './Privateroute';
 import Error from '../pages/Error';
+import Profile from '../pages/Profile';
 
 const router = createBrowserRouter([
     {
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/service',
-        element:<Service></Service>
+        element:<Privateroute><Service></Service></Privateroute>
       },
       {
         path:'/about',
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path:'/product',
         element:<Product></Product>
+      },
+      {
+        path:'/profile',
+        element:<Privateroute><Profile></Profile></Privateroute>
       }
       ]
     },

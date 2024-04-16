@@ -10,7 +10,7 @@ import { app } from '../firebase.config';
 import { useForm } from 'react-hook-form';
 import { IoEyeOutline } from 'react-icons/io5';
 import PageTitle from '../components/PageTitle';
-
+import swal from 'sweetalert';
 
 const Login = () => {
 
@@ -28,10 +28,12 @@ const Login = () => {
 
         signIn(email, password)
 		.then(result =>{
+			swal("Success fully login");
             console.log(result.user)
             navigate(location?.state ? location.state : '/');
         })
         .catch(error =>{
+			swal('Sign in failed!');
             console.error(error)
             // setError(error.message)
         })
@@ -41,9 +43,15 @@ const Login = () => {
 		socialProvider()
 		.then(result =>{
 			if(result.user){
+				swal("Success fully login");
 				navigate(location?.state ? location.state : '/');
 			}
 		})
+		.catch(error =>{
+			swal('Sign in failed!');
+            console.error(error)
+            // setError(error.message)
+        })
 	}
 
     return (
@@ -65,7 +73,7 @@ const Login = () => {
                                 <span className="label-text text-gray-400">Password</span>
                             </label>
                             <div className="relative mb-3 ">
-                                <input type={showEye ? "text" : "password"} placeholder="password" name="password" className="w-full py-3 px-4 input input-bordered bg-gray-900" 
+                                <input type={showEye ? "text" : "password"} placeholder="password" name="password" className="w-full py-3 px-4 input input-bordered bg-gray-900 text-white" 
                                     {...register("password", { required: true })}
                                 />
                                 <span className="absolute top-3 right-2 text-white"  onClick={() => setShowEye(!showEye)}>
