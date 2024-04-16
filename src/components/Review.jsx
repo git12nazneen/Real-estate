@@ -4,6 +4,10 @@ const Review = () => {
     return (
         <div>
                 <section className="p-6 my-6 bg-rose-200 text-gray-100">
+                <div className="max-w-md text-black text-center mx-auto my-5 pb-6">
+                    <h1 className='text-2xl font-bold text-rose-900'>Some Count That Matters</h1>
+                    <h2 className='font-light'>Our achievement in the journey depicted in numbers</h2>
+                </div>
             <div className="container grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-4">
                 <div className="flex p-4 space-x-4 rounded-lg md:space-x-6  bg-gray-100 text-gray-900">
                     <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 bg-gray-400 text-white">
