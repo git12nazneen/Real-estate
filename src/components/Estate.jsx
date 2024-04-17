@@ -6,16 +6,16 @@ const Estate = ({estate}) => {
     const {estate_title, image, description, price, area, facilities, location,id} = estate
 
     return (
-        <div className=''>
+        <div className='overflow-x-hidden'>
           <section className="py-6 sm:py-3 bg-gray-100 text-gray-800">
             <div className="container px-6 py-2  space-y-8 ">
                
-                <div className='bg-gray-100 '>
+                <div data-aos="zoom-in-down" data-aos-duration="2000" className='bg-gray-100 '>
                     <article className="flex flex-col bg-rose-200">
                         <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
                             <img alt="" className="object-cover w-full h-52 bg-gray-500" src={estate.image} />
                         </a>
-                        <div className="flex flex-col flex-1 p-6">
+                        <div className="flex flex-col flex-1 lg:p-6 p-3">
                             <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
                             <a rel="noopener noreferrer" href="#" className="text-xs tracking-wider uppercase hover:underline text-gray-800">{estate.estate_title}</a>
                             <h3 className="flex-1 py-2 text-lg leading-snug">{estate.description.slice(0,61)}</h3>

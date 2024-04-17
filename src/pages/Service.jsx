@@ -13,7 +13,7 @@ const Service = () => {
             <section className="p-4 lg:p-8 bg-gray-100 text-gray-900">
                 <div className="container mx-auto space-y-12">
                     <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
-                        <img src={service1} alt="" className="h-80 bg-gray-500 aspect-video" />
+                        <img data-aos="zoom-out" src={service1} alt="" className="h-80 bg-gray-500 aspect-video" />
                         <div className="flex flex-col justify-center flex-1 p-6 bg-rose-200">
                             <span className="text-xs uppercase text-gray-900">Warhouse</span>
                             <h3 className="text-3xl font-bold">Property Management</h3>
@@ -22,7 +22,7 @@ const Service = () => {
                         </div>
                     </div>
                     <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse">
-                        <img src={service} alt="" className="h-80 bg-gray-500 aspect-video" />
+                        <img data-aos="zoom-out" src={service} alt="" className="h-80 bg-gray-500 aspect-video" />
                         <div className="flex flex-col justify-center flex-1 p-6 bg-rose-200">
                             <span className="text-xs uppercase text-gray-900">Cold storage</span>
                             <h3 className="text-3xl font-bold">Customized Solutions</h3>
@@ -31,7 +31,7 @@ const Service = () => {
                         </div>
                     </div>
                     <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
-                        <img src={service2} alt="" className="h-80 bg-gray-500 aspect-video" />
+                        <img data-aos="zoom-out" src={service2} alt="" className="h-80 bg-gray-500 aspect-video" />
                         <div className="flex flex-col justify-center flex-1 p-6 bg-rose-200">
                             <span className="text-xs uppercase text-gray-900">Power production</span>
                             <h3 className="text-3xl font-bold">Site Identification and Acquisition</h3>

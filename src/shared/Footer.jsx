@@ -13,7 +13,7 @@ const Footer = () => {
 			<a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
 				<div className="items-center justify-center  rounded-full ">
 					<div className=''>
-                        <img className='mx-auto lg:mx-0 h-24 w-24' src={png} alt="" />
+                        <img data-aos="flip-up" className='mx-auto lg:mx-0 h-24 w-24' src={png} alt="" />
                     </div>
                     <small className='font-light text-red-100 pt-3'>Discover your dream home with BrivIn. Our team is dedicated to helping you find the perfect property tailored to your needs. Whether you're looking for a cozy apartment, a spacious family home,  we're here to guide you every step of the way.. Welcome to a world of possibilities with BrivIn.</small>
 				</div>

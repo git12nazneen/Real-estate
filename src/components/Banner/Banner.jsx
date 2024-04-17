@@ -38,11 +38,11 @@ const Banner = () => {
           
 
             <SwiperSlide>
-                <div className="slide-container">
+                <div className="slide-container overflow-x-hidden">
                     <img src={banner1} alt="Banner 1" />
                     <div className="overlay">
                         {/* <div className="swiper-text">Text for Slide 1</div> */}
-                        <div className="max-w-md text-white">
+                        <div data-aos="zoom-in-up" className="max-w-md text-white ">
                        
                           <p className="mb-5">Warehouses are essential for storing goods and products in a safe and organized manner.</p>
                           <a href="#_" class="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group">
@@ -61,7 +61,7 @@ const Banner = () => {
                 <div className="slide-container">
                     <img src={banner2} alt="Banner 2" />
                     <div className="overlay">
-                    <div className="max-w-md text-white">
+                    <div data-aos="zoom-in-up" className="max-w-md text-white">
                        
                        <p className="mb-5">Factories are facilities where raw materials or components are transformed into finished goods through various manufacturing processes. </p>
                        <a href="#_" class="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group">
@@ -80,7 +80,7 @@ const Banner = () => {
                 <div className="slide-container">
                     <img src={banner3} alt="Banner 3" />
                     <div className="overlay">
-                    <div className="max-w-md text-white">
+                    <div data-aos="zoom-in-up" className="max-w-md text-white">
                        
                        <p className="mb-5"> Production plants encompass a wide range of facilities dedicated to manufacturing goods on a large scale.</p>
                        <a href="#_" class="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group">
@@ -99,7 +99,7 @@ const Banner = () => {
                 <div className="slide-container">
                     <img src={banner4} alt="Banner 4" />
                     <div className="overlay">
-                    <div className="max-w-md text-white">
+                    <div data-aos="zoom-in-up" className="max-w-md text-white">
                        
                        <p className="mb-5">Industrial parks are areas zoned and developed specifically for industrial activities.</p>
                        <a href="#_" class="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group">

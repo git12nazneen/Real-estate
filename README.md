@@ -1,8 +1,25 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# BrivIn: Industrial Real Estate Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+BrivIn is a sophisticated web platform designed to showcase streamline the management and operation of various industrial properties, including warehouses, factories, production plants, industrial parks, cold storage facilities, power plants, and more. 
+
+
+
+## Technologies Used
+
+- React.js
+- Vite
+- React Router DOM
+- Firebase Authentication
+- Tailwind CSS
+- Tailwind UI
+- Daisy UI
+- Heroicons
+- React icons
+- Sweat alert
+- Daisy ui loader
+- React-leaflet
+- Mamba Ui
+- AOS Package
+- Helmet

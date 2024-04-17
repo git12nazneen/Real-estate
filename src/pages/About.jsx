@@ -7,17 +7,17 @@ import PageTitle from '../components/PageTitle';
 
 const About = () => {
     return (
-        <div>
+        <div className='overflow-x-hidden'>
             <PageTitle title='About'></PageTitle>
             <div>
             <div className="hero bg-rose-100">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="max-w-lg card shrink-0 w-80 lg:w-full  ">
+                    <div data-aos="fade-left" data-aos-delay="4000" className="max-w-lg card shrink-0 w-80 lg:w-full  ">
                         <div>
-                            <img className='rounded-full shadow-3xl border-white border-8 shadow-slate-500' src={aboutImg} alt="" />
+                            <img data-aos="zoom-in" className='rounded-full shadow-3xl border-white border-8 shadow-slate-500' src={aboutImg} alt="" />
                         </div>
                     </div>
-                    <div className="max-w-lg flex-1 text-center lg:text-left space-y-6">
+                    <div data-aos="fade-right" className="max-w-lg flex-1 text-center lg:text-left space-y-6">
                         <h1 className='text-3xl font-extrabold'>Why should choose <br />
                             our agency?</h1>
                         <h2 className='text-red-800'>Lorem ipsum, dolor sit amet consectetur adipisicing.</h2>
