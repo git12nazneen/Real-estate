@@ -36,7 +36,7 @@ BrivIn is a sophisticated web platform designed to showcase streamline the manag
 - Helmet
 
 ## Demo
-Check out the live demo of Paradice Cove [here]()
+Check out the live demo of Paradice Cove [here](https://industrial-real-state.web.app/)
 
 ## Installation:
 1. Clone the repository:
