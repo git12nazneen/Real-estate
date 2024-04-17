@@ -14,11 +14,10 @@ const Register = () => {
     const [error, setError] = useState('')
     const [ success , setSuccess ] = useState('')
     const [showPassword, setShowpassword] = useState(false);
+    const [loading, setLoading] = useState(false);
     const location = useLocation();
 	const navigate = useNavigate();
 	console.log('location in login', location)
-    // const [loading, setLoading] = useState(false);
-
 
     const {
 		register,
@@ -28,7 +27,8 @@ const Register = () => {
 
 	  const onSubmit = (data) => {
    
-        const {email, password ,image, name} = data
+        const {email, password ,image, name} = data;
+        setLoading(true);
         if(password.length < 6){
             swal('Length must be at least 6 character');
             return;
@@ -58,7 +58,6 @@ const Register = () => {
             console.error('Sign in error:', error);
           })
           
-
             // reset error and success
             setSuccess('');
             setError('');
@@ -120,6 +119,7 @@ const Register = () => {
                     <button className="btn bg-sky-600 text-white">Register</button>
                     </div>
                 </form>
+                      
                 {
                      error && <p className="text-red-700">{error}</p>
                 }

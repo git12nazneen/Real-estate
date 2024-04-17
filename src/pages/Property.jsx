@@ -24,7 +24,7 @@ const Property = () => {
                     <li className='flex items-center '><span className='mr-3'><FaHandPointRight /></span> {property.facilities[0]}</li>
                     <li className='flex items-center'><span className='mr-3'><FaHandPointRight /></span> {property.facilities[1]}</li>
                 </ul>
-                <div className="flex  space-x-5">
+                <div className="flex flex-wrap space-x-5">
                 <button className="btn bg-rose-400 rounded-3xl font-light"><span>Status:</span> {property.status}</button>
                 <button className="btn bg-black rounded-3xl font-light text-white"><span>Price:</span> {property.price}</button>
                 <button className="btn bg-rose-400 rounded-3xl font-light"><span>Area:</span> {property.area}</button>
