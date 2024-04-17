@@ -20,7 +20,7 @@ const About = () => {
                     <div data-aos="fade-right" className="max-w-lg flex-1 text-center lg:text-left space-y-6">
                         <h1 className='text-3xl font-extrabold'>Why should choose <br />
                             our agency?</h1>
-                        <h2 className='text-red-800'>Lorem ipsum, dolor sit amet consectetur adipisicing.</h2>
+                        <h2 className='text-red-800'> BrivIn offers a simple and straightforward solution for industrial property management, allowing you to focus on what matters most.</h2>
                         <p className='font-light text-sm'>At BrivIn, we specialize in providing comprehensive real estate solutions for clients involved in the power generation sector. With our deep understanding of the unique challenges and opportunities in this industry, we offer a range of services to support your power plant real estate needs</p>
                         <div className='flex flex-wrap lg:flex-row items-center justify-center border-8 border-red-800 py-6 px-5'>
                             <div className='flex-1'>

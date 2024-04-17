@@ -58,7 +58,7 @@ const Profile = () => {
                     <div className="space-y-2">
                         <div>
                         <Link to='/updateProfile'>
-                         <button  type="button" className="w-full px-8 py-3 font-semibold rounded-md bg-rose-950 text-white">Update Profile</button>
+                         <button  type="button" className="w-full px-8 py-3 font-semibold rounded-md bg-rose-950 text-white">Click to Update Profile</button>
                          </Link>
                         </div>
                         
