@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from 'react';
 import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { app } from '../firebase.config';
 export const AuthContext = createContext(null)
-
+import swal from 'sweetalert';
 const auth = getAuth(app);
 
 const AuthProvider = ({children}) => {
@@ -58,6 +58,7 @@ const AuthProvider = ({children}) => {
 
     const logOut = () =>{
         return signOut(auth)
+        swal('logout successfully')
     }
 
     // observer

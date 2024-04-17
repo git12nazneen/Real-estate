@@ -41,7 +41,6 @@ const Banner = () => {
                 <div className="slide-container overflow-x-hidden">
                     <img src={banner1} alt="Banner 1" />
                     <div className="overlay">
-                        {/* <div className="swiper-text">Text for Slide 1</div> */}
                         <div data-aos="zoom-in-up" className="max-w-md text-white ">
                        
                           <p className="mb-5">Warehouses are essential for storing goods and products in a safe and organized manner.</p>

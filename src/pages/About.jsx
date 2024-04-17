@@ -4,11 +4,13 @@ import { CiStar } from "react-icons/ci";
 import { FaDigitalOcean } from "react-icons/fa";
 import { SiAntdesign } from "react-icons/si";
 import PageTitle from '../components/PageTitle';
+import AboutHead from '../components/CommonHeader/AboutHead';
 
 const About = () => {
     return (
         <div className='overflow-x-hidden'>
             <PageTitle title='About'></PageTitle>
+            <AboutHead></AboutHead>
             <div>
             <div className="hero bg-rose-100">
                 <div className="hero-content flex-col lg:flex-row-reverse">

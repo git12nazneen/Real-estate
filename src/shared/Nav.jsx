@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logoImage from '../assets/logo.png';
 import { AuthContext } from '../provider/AuthProvider';
+import swal from 'sweetalert';
 // import { FaUserCircle } from "react-icons/fa";
 
 const Nav = () => {
@@ -13,6 +14,7 @@ const Nav = () => {
         logOut()
         .then()
         .catch()
+        swal('logout success')
     }
 
     const navLinks = <>

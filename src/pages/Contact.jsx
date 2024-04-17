@@ -1,13 +1,14 @@
 import React from 'react';
 import Leaflet from './Leaflet';
 import PageTitle from '../components/PageTitle';
+import Contacthead from '../components/CommonHeader/Contacthead';
 
 const Contact = () => {
   return (
 	
     <div className=''>
 		<PageTitle title='Contact'></PageTitle>
-  		
+  		<Contacthead></Contacthead>
    <section className="py-6 text-gray-900">
 	<div data-aos="fade-up"
      data-aos-anchor-placement="top-bottom" className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">

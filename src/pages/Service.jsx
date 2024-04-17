@@ -4,12 +4,13 @@ import PageTitle from '../components/PageTitle';
 import service from '../assets/service.jpg'
 import service1 from '../assets/service1.jpg'
 import service2 from '../assets/servie2.jpg'
+import ServiceHead from '../components/CommonHeader/ServiceHead';
 
 const Service = () => {
     return (
         <div>
             <PageTitle title='Service'></PageTitle>
-            
+            <ServiceHead></ServiceHead>
             <section className="p-4 lg:p-8 bg-gray-100 text-gray-900">
                 <div className="container mx-auto space-y-12">
                     <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
