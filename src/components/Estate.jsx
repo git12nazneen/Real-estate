@@ -7,7 +7,7 @@ const Estate = ({estate}) => {
 
     return (
         <div className='overflow-x-hidden'>
-          <section className="py-6 sm:py-3 bg-gray-100 text-gray-800">
+          <section className="lg:py-6 py-1 sm:py-3 bg-gray-100 text-gray-800">
             <div className="container px-6 py-2  space-y-8 ">
                
                 <div data-aos="zoom-in-down" data-aos-duration="2000" className='bg-gray-100 '>

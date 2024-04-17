@@ -21,7 +21,7 @@ const Profile = () => {
     return (
         <div>
            <PageTitle title='Profile'></PageTitle>
-           <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900 mx-auto shadow-xl shadow-gray-700 my-10" >
+           <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900 mx-auto shadow-md shadow-gray-400 my-10" >
                 <div className="mb-8 text-center">
                     <div className='rounded-full items-center'>
                          <img className='rounded-full  mx-auto shadow-xl shadow-slate-400' src={user?.photoURL} alt="" />
