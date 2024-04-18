@@ -4,6 +4,7 @@ import service1 from '../assets/service1.jpg'
 import service2 from '../assets/servie2.jpg'
 import ServiceHead from '../components/CommonHeader/ServiceHead';
 
+
 const Service = () => {
     return (
         <div>
