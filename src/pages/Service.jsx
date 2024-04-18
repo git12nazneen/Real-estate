@@ -43,7 +43,6 @@ const Service = () => {
             </section>
         </div>
     );
-
 };
 
 export default Service;
