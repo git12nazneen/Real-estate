@@ -1,6 +1,4 @@
-
 import PageTitle from '../components/PageTitle';
-
 import service from '../assets/service.jpg'
 import service1 from '../assets/service1.jpg'
 import service2 from '../assets/servie2.jpg'
@@ -44,6 +42,7 @@ const Service = () => {
             </section>
         </div>
     );
+
 };
 
 export default Service;
