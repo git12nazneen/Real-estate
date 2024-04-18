@@ -28,8 +28,6 @@ const Property = () => {
                 <button className="btn bg-rose-400 rounded-3xl font-light"><span>Status:</span> {property.status}</button>
                 <button className="btn bg-black rounded-3xl font-light text-white"><span>Price:</span> {property.price}</button>
                 <button className="btn bg-rose-400 rounded-3xl font-light"><span>Area:</span> {property.area}</button>
-               
-              
                 </div>
             </div>
             </div>
