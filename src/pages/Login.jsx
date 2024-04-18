@@ -28,12 +28,18 @@ const Login = () => {
 
         signIn(email, password)
 		.then(result =>{
-			swal("Success fully login");
+			swal({
+				text: "Success fully login",
+				icon: "success"
+			  });
             console.log(result.user)
             navigate(location?.state ? location.state : '/');
         })
         .catch(error =>{
-			swal('Sign in failed!');
+			swal({
+                text: "Sign in failed!",
+                icon: "error"
+              });
             console.error(error)
             // setError(error.message)
         })
@@ -43,12 +49,18 @@ const Login = () => {
 		socialProvider()
 		.then(result =>{
 			if(result.user){
-				swal("Success fully login");
+				swal({
+					text: "Success fully login",
+					icon: "success"
+				  });
 				navigate(location?.state ? location.state : '/');
 			}
 		})
 		.catch(error =>{
-			swal('Sign in failed!');
+			swal({
+                text: "Sign in failed!",
+                icon: "error"
+              });
             console.error(error)
             // setError(error.message)
         })

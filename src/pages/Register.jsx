@@ -30,15 +30,27 @@ const Register = () => {
         const {email, password ,image, name} = data;
         setLoading(true);
         if(password.length < 6){
-            swal('Length must be at least 6 character');
+            swal({
+                text: "Length must be at least 6 character",
+                icon: "error"
+              });
             return;
         }
         if(!/[A-Z]/.test(password)){
-            swal('Your password should have one uppercase character')
+          
+            swal({
+                text: "Your password should have one uppercase character",
+                icon: "error"
+              });
             return;
         }
         if(!/[a-z]/.test(password)){
-            swal('Your password should have one lowercase character')
+            
+
+            swal({
+                text: "Your password should have one lowercase character",
+                icon: "error"
+              });
             return;
         }
         // create user and update profile
@@ -47,14 +59,20 @@ const Register = () => {
             updateUserProfile(name, image)
             .then( ()=>{
                 if(result.user){
-                    swal("Success fully login");
+                    swal({
+                        text: "Success fully login",
+                        icon: "success"
+                      });
                     navigate(location?.state ? location.state : '/');
                 }
             })
 			
 		})
         .catch(error => {
-            swal('Sign in failed!');
+            swal({
+                text: "Sign in failed!",
+                icon: "error"
+              });
             console.error('Sign in error:', error);
           })
           

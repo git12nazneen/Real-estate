@@ -14,7 +14,10 @@ const Nav = () => {
         logOut()
         .then()
         .catch()
-        swal('logout success')
+        swal({
+            text: "logout success",
+            icon: "success"
+          });
     }
 
     const navLinks = <>
