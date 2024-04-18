@@ -5,7 +5,6 @@ const Faq = () => {
     return (
         <div className='overflow-x-hidden'>
           <div className="hero min-h-screen  max-w-6xl mx-auto">
-         
             <div className="hero-content flex-col lg:flex-row-reverse md:flex-row-reverse">
            
                 <div  data-aos="fade-left" className='w:6/6 lg:w-3/6 space-y-5 '>
