@@ -1,13 +1,8 @@
-
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
 import './style.css'
-
-
 // import required modules
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
@@ -35,8 +30,6 @@ const Banner = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-          
-
             <SwiperSlide>
                 <div className="slide-container overflow-x-hidden">
                     <img src={banner1} alt="Banner 1" />
@@ -117,5 +110,4 @@ const Banner = () => {
         </>
       );
 };
-
 export default Banner;
